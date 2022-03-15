@@ -1,0 +1,77 @@
+@import '../index.less';
+
+.@{prefixCls}-head-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  border: 1px solid rgba(217, 217, 217, 0.7);
+  border-right-width: 0;
+  border-left-width: 0;
+  box-shadow: 0 -1px 0 0 #d9d9d9;
+}
+
+.@{prefixCls}-head {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  display: flex;
+  flex: 1;
+  flex-basis: 60px;
+  align-items: center;
+  height: 60px;
+}
+
+.@{prefixCls}-head-title {
+  padding: 0;
+  margin: 0;
+  font-size: 28px;
+  color: rgb(33, 132, 255);
+}
+
+.@{prefixCls}-head-split-line {
+  width: 1px;
+  height: 24px;
+  margin: 0 20px;
+  background-color: rgb(217, 217, 217);
+}
+
+.@{prefixCls}-head-input {
+  width: 80px;
+  margin: 0 8px;
+}
+
+.@{prefixCls}-head-interval {
+  margin-right: 24px;
+}
+
+.@{prefixCls}-head-color-box {
+  position: relative;
+  height: 20px;
+}
+
+.@{prefixCls}-head-color-picker {
+  position: absolute;
+  top: 40px;
+  left: 0;
+}
+
+.@{prefixCls}-head-rect {
+  width: 20px;
+  height: 20px;
+  margin-right: 24px;
+  cursor: pointer;
+}
+
+.@{prefixCls}-head-rect svg {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.@{prefixCls}-head-scaler-icon {
+  font-size: 20px;
+  color: #ccc;
+  cursor: pointer;
+}

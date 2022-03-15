@@ -1,0 +1,35 @@
+@prefixCls: dx-editor;
+@tool-height: 60px;
+@menu-width: calc(100% / 6);
+@menu-panel-width: 30%;
+@configer-panel-width: 20%;
+@canvas-width: 100% - @menu-panel-width - @configer-panel-width;
+
+.@{prefixCls}-tool-head-height {
+  height: @tool-height;
+}
+
+.@{prefixCls}-menu-width {
+  width: @menu-width;
+}
+
+.@{prefixCls}-canvas-width {
+  width: calc(100% - @menu-width * 2);
+}
+
+.@{prefixCls}-panel-width {
+  width: @configer-panel-width;
+}
+
+.@{prefixCls}-editor {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.@{prefixCls}-editor-body {
+  display: flex;
+  flex-grow: 1;
+  height: calc(100% - @tool-height);
+  background-color: #f5f5f5;
+}

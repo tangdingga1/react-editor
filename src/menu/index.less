@@ -1,0 +1,92 @@
+@import '../index.less';
+
+@menu-panel-max-width: 72px;
+
+.@{prefixCls}-menu {
+  z-index: 1;
+  display: flex;
+}
+
+.@{prefixCls}-menu-panel {
+  width: @menu-panel-width;
+  max-width: @menu-panel-max-width;
+  height: 100%;
+  background-color: #fff;
+  border: 1px solid rgba(240, 240, 240, 1);
+  border-top: unset;
+  box-shadow: -1px 0 0 0 #f0f0f0;
+}
+
+.@{prefixCls}-menu-icon {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: rgba(153, 153, 153, 1);
+  cursor: pointer;
+}
+
+.@{prefixCls}-menu-icon.@{prefixCls}-menu-icon-active {
+  color: #2184ff;
+  background-color: #f1f2f5;
+}
+
+.@{prefixCls}-menu-icon.@{prefixCls}-menu-icon-active::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  content: '';
+  background-color: #2184ff;
+}
+
+.@{prefixCls}-menu-icon span svg {
+  margin-top: 7px;
+  margin-bottom: 4px;
+  font-size: 24px;
+}
+
+.@{prefixCls}-menu-content {
+  position: relative;
+  flex-grow: 1;
+  background-color: #fff;
+  box-shadow: 2px 0 6px 0 #f0f0f0;
+  transition: flex-grow 0.5s ease;
+}
+
+.@{prefixCls}-menu-content-hidden {
+  flex-grow: 0;
+  width: 0;
+}
+
+.@{prefixCls}-menu-content-item {
+  opacity: 1;
+  transition: opacity 0.1s ease;
+}
+
+.@{prefixCls}-menu-content-hidden .@{prefixCls}-menu-content-item {
+  opacity: 0;
+}
+
+.@{prefixCls}-menu-arrow {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 28px;
+  height: 83px;
+  cursor: pointer;
+  background: #fff;
+  border-radius: 0 100px 100px 0;
+  box-shadow: 2px 0 6px 0 #f0f0f0;
+  transform: translateY(-50%);
+}
+
+.@{prefixCls}-menu-arrow svg {
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  transform: rotate(90deg);
+}
